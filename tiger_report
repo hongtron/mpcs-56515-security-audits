@@ -1,0 +1,255 @@
+Security scripts *** 3.2.3, 2008.09.10.09.30 ***
+Tue Apr 25 22:49:01 CDT 2017
+22:49> Beginning security report for ali-VirtualBox (x86_64 Linux 4.8.0-49-generic).
+
+# Performing check of passwd files...
+# Checking entries from /etc/passwd.
+--WARN-- [pass014w] Login (ali) is disabled, but has a valid shell. 
+--WARN-- [pass014w] Login (guest-gzwxju) is disabled, but has a valid shell. 
+--WARN-- [pass017w] Login ID irc has uid == 0. 
+--WARN-- [pass016w] User kernoops has / as home directory 
+--WARN-- [pass014w] Login (root) is disabled, but has a valid shell. 
+--WARN-- [pass015w] Login ID sync does not have a valid shell (/bin/sync). 
+--WARN-- [pass002w] UID 0 exists multiple times (2) in /etc/passwd. 
+--WARN-- [pass012w] Home directory /nonexistent exists multiple times (4) in 
+         /etc/passwd. 
+--WARN-- [pass012w] Home directory /run/systemd exists multiple times (2) in 
+         /etc/passwd. 
+--WARN-- [pass012w] Home directory /var/lib/sendmail exists multiple times (2) 
+         in /etc/passwd. 
+--WARN-- [pass006w] Integrity of password files questionable (/usr/sbin/pwck 
+         -r). 
+
+# Performing check of group files...
+
+# Performing check of user accounts...
+# Checking accounts from /etc/passwd.
+--WARN-- [acc021w] Login ID avahi-autoipd appears to be a dormant account. 
+--WARN-- [acc021w] Login ID dnsmasq appears to be a dormant account. 
+--WARN-- [acc021w] Login ID geoclue appears to be a dormant account. 
+--WARN-- [acc006w] Login ID mail's home directory (/var/mail) has group `mail' 
+         and world write access. 
+--WARN-- [acc021w] Login ID nm-openvpn appears to be a dormant account. 
+--WARN-- [acc022w] Login ID nobody home directory (/nonexistent) is not 
+         accessible. 
+--WARN-- [acc021w] Login ID usermetrics appears to be a dormant account. 
+
+# Performing check of /etc/hosts.equiv and .rhosts files...
+
+# Checking accounts from /etc/passwd...
+
+# Performing check of .netrc files...
+
+# Checking accounts from /etc/passwd...
+
+# Performing common access checks for root (in /etc/default/login, /securetty, and /etc/ttytab...
+--WARN-- [root003w] Root user has message capability turned on. 
+
+# Performing check of PATH components...
+--WARN-- [path009w] /etc/profile does not export an initial setting for PATH. 
+# Only checking user 'root'
+
+# Performing check of anonymous FTP...
+
+# Performing checks of mail aliases...
+# Checking aliases from /etc/aliases.
+
+# Performing check of `cron' entries...
+--WARN-- [cron004w] Root crontab does not exist 
+--WARN-- [cron005w] Use of cron is not restricted 
+
+# Performing check of 'services' ...
+# Checking services from /etc/services.
+--WARN-- [inet003w] The port for service ssmtp is also assigned to service 
+         urd. 
+--WARN-- [inet003w] The port for service pipe-server is also assigned to 
+         service search. 
+
+# Performing NFS exports check...
+
+# Performing check of system file permissions...
+--ALERT-- [perm023a] /bin/su is setuid to `root'. 
+--WARN-- [perm001w] /etc/fstab should not have group write. 
+--ALERT-- [perm023a] /usr/bin/passwd is setuid to `root'. 
+--ALERT-- [perm024a] /usr/bin/wall is setgid to `tty'. 
+
+# Checking for known intrusion signs...
+# Testing for promiscuous interfaces with /bin/ip
+# Testing for backdoors in inetd.conf
+
+# Performing check of files in system mail spool...
+--WARN-- [kis008w] File "root" in the mail spool, owned by "irc". 
+
+# Performing check for rookits...
+# Running chkrootkit (/usr/sbin/chkrootkit) to perform further checks...
+--WARN-- [rootkit004w] Chkrootkit has detected a possible rootkit installation 
+Possible Linux/Ebury - Operation Windigo installetd
+
+# Performing system specific checks...
+# Performing checks for Linux/4...
+
+# Checking boot loader file permissions...
+--WARN-- [boot03w] Could not access LILO's or Grub's configuration file 
+
+# Checking for vulnerabilities in inittab configuration...
+
+# Checking for correct umask settings for init scripts...
+--WARN-- [misc019w] There are no umask settings for init.d scripts 
+
+# Checking Logins not used on the system ...
+
+# Checking network configuration
+--WARN-- [lin012w] The system accepts ICMP redirection messages 
+--FAIL-- [lin016f] The system permits source routing from incoming packets 
+--WARN-- [lin017w] The system is not configured to log suspicious (martian) 
+         packets 
+--FAIL-- [lin019f] The system does not have any local firewall rules 
+         configured 
+
+# Verifying system specific password checks...
+
+# Checking OS release...
+--WARN-- [osv004w] Unreleased Debian GNU/Linux version `stretch/sid' 
+
+# Checking installed packages vs Debian Security Advisories...
+
+# Checking md5sums of installed files
+--FAIL-- [lin005f] Installed file 
+         `/usr/lib/python3/dist-packages/cupshelpers/__pycache__/__init__.cpython-35.pyc' 
+         checksum differs from installed package 'python3-cupshelpers'. 
+--FAIL-- [lin005f] Installed file 
+         `/usr/lib/python3/dist-packages/cupshelpers/__pycache__/config.cpython-35.pyc' 
+         checksum differs from installed package 'python3-cupshelpers'. 
+--FAIL-- [lin005f] Installed file 
+         `/usr/lib/python3/dist-packages/cupshelpers/__pycache__/cupshelpers.cpython-35.pyc' 
+         checksum differs from installed package 'python3-cupshelpers'. 
+--FAIL-- [lin005f] Installed file 
+         `/usr/lib/python3/dist-packages/cupshelpers/__pycache__/installdriver.cpython-35.pyc' 
+         checksum differs from installed package 'python3-cupshelpers'. 
+--FAIL-- [lin005f] Installed file 
+         `/usr/lib/python3/dist-packages/cupshelpers/__pycache__/openprinting.cpython-35.pyc' 
+         checksum differs from installed package 'python3-cupshelpers'. 
+--FAIL-- [lin005f] Installed file 
+         `/usr/lib/python3/dist-packages/cupshelpers/__pycache__/ppds.cpython-35.pyc' 
+         checksum differs from installed package 'python3-cupshelpers'. 
+--FAIL-- [lin005f] Installed file 
+         `/usr/lib/python3/dist-packages/cupshelpers/__pycache__/xmldriverprefs.cpython-35.pyc' 
+         checksum differs from installed package 'python3-cupshelpers'. 
+
+# Checking installed files against packages...
+--WARN-- [lin001w] File `/lib/udev/hwdb.bin' does not belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-49-generic/modules.dep' does not 
+         belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-49-generic/modules.alias' does not 
+         belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-49-generic/modules.alias.bin' does 
+         not belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-49-generic/modules.dep.bin' does 
+         not belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-49-generic/modules.softdep' does 
+         not belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-49-generic/modules.symbols' does 
+         not belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-49-generic/modules.symbols.bin' 
+         does not belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-49-generic/modules.builtin.bin' 
+         does not belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-49-generic/modules.devname' does 
+         not belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-46-generic/modules.dep' does not 
+         belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-46-generic/modules.alias' does not 
+         belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-46-generic/modules.alias.bin' does 
+         not belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-46-generic/modules.dep.bin' does 
+         not belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-46-generic/modules.softdep' does 
+         not belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-46-generic/modules.symbols' does 
+         not belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-46-generic/modules.symbols.bin' 
+         does not belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-46-generic/modules.builtin.bin' 
+         does not belong to any package. 
+--WARN-- [lin001w] File `/lib/modules/4.8.0-46-generic/modules.devname' does 
+         not belong to any package. 
+
+# Performing check of root directory...
+
+# Checking device permissions...
+--WARN-- [dev003w] The directory /dev/block resides in a device directory. 
+--WARN-- [dev003w] The directory /dev/char resides in a device directory. 
+--WARN-- [dev003w] The directory /dev/cpu resides in a device directory. 
+--FAIL-- [dev002f] /dev/fuse has world permissions 
+--WARN-- [dev003w] The directory /dev/hugepages resides in a device directory. 
+--FAIL-- [dev002f] /dev/kmsg has world permissions 
+--WARN-- [dev003w] The directory /dev/lightnvm resides in a device directory. 
+--WARN-- [dev003w] The directory /dev/mqueue resides in a device directory. 
+--FAIL-- [dev002f] /dev/rfkill has world permissions 
+--WARN-- [dev003w] The directory /dev/vfio resides in a device directory. 
+
+# Checking for existence of log files...
+--FAIL-- [logf005f] Log file /var/log/btmp permission should be 660 
+--FAIL-- [logf007f] Log file /var/log/messages does not exist 
+
+# Checking for correct umask settings for user login shells...
+--WARN-- [misc021w] There is no umask definition for the dash shell 
+--WARN-- [misc021w] There is no umask definition for the bash shell 
+
+# Checking listening processes 
+--WARN-- [lin003w] The process `avahi-daemon' is listening on socket 35639 
+         (UDP on every interface) is run by avahi. 
+--WARN-- [lin003w] The process `avahi-daemon' is listening on socket 5353 (UDP 
+         on every interface) is run by avahi. 
+--WARN-- [lin002i] The process `cups-browsed' is listening on socket 631 (UDP) 
+         on every interface. 
+--WARN-- [lin002i] The process `dhclient' is listening on socket 68 (UDP) on 
+         every interface. 
+--WARN-- [lin003w] The process `dnsmasq' is listening on socket 53 (TCP on 
+         127.0.1.1 interface) is run by nobody. 
+--WARN-- [lin003w] The process `dnsmasq' is listening on socket 49316 (UDP on 
+         every interface) is run by nobody. 
+--WARN-- [lin003w] The process `dnsmasq' is listening on socket 53 (UDP on 
+         127.0.1.1 interface) is run by nobody. 
+--WARN-- [lin003w] The process `systemd-resolve' is listening on socket 5355 
+         (TCP on every interface) is run by systemd-resolve. 
+--WARN-- [lin003w] The process `systemd-resolve' is listening on socket 53 
+         (TCP on 127.0.0.53 interface) is run by systemd-resolve. 
+--WARN-- [lin003w] The process `systemd-resolve' is listening on socket 5355 
+         (UDP on every interface) is run by systemd-resolve. 
+--WARN-- [lin003w] The process `systemd-resolve' is listening on socket 53 
+         (UDP on 127.0.0.53 interface) is run by systemd-resolve. 
+
+# Checking sshd_config configuration files...
+--FAIL-- [ssh005w] Cannot find a configuration file for SSH. 
+
+# Performing common access checks for root...
+--FAIL-- [netw020f] There is no /etc/ftpusers file. 
+
+# Checking ntpd configuration...
+
+# Checking unusual file names...
+
+# Looking for unusual device files...
+--ALERT-- [fsys006a] Unexpected device files found: 
+b--------- 1 root root 0, 0 Apr 25 22:42 /run/systemd/inaccessible/blk
+c--------- 1 root root 0, 0 Apr 25 22:42 /run/systemd/inaccessible/chr
+
+
+# Checking symbolic links...
+
+# Performing check of embedded pathnames...
+--WARN-- [embed001w] Path `/etc/mail/Makefile' contains `/etc/mail' which is 
+         not owned by root (owned by smmta). 
+         Embedded references in: /etc/init.d/sendmail
+                                 /usr/bin/mailq->/default(PATH)
+--WARN-- [embed001w] Path `/etc/mail/tls/starttls.m4' contains `/etc/mail' 
+         which is not owned by root (owned by smmta). 
+         Embedded references in: /etc/mail/Makefile->/etc/init.d/sendmail
+                                 /etc/mail/Makefile->/usr/bin/mailq->/default(PATH)
+--WARN-- [embed001w] Path `/etc/mail/tls/starttls.m4' contains `/etc/mail/tls' 
+         which is not owned by root (owned by smmta). 
+         Embedded references in: /etc/mail/Makefile->/etc/init.d/sendmail
+                                 /etc/mail/Makefile->/usr/bin/mailq->/default(PATH)
+22:53> Security report completed for ali-VirtualBox.

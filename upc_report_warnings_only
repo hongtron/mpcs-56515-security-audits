@@ -1,0 +1,6 @@
+Search the output below for the word 'WARNING'.  If you don't see it then
+[UPC002] WARNING: /etc/fstab is a critical config file. The group root can write to /etc/fstab
+[UPC017] WARNING: Sudo is configured.  Manually check nothing unsafe is allowed:
+[UPC003] WARNING: /var/mail is the home directory of mail. World write is set for /var/mail (but sticky bit set)
+[UPC002] WARNING: /tmp/guest-gzwxju is the home directory of guest-gzwxju. The group root can write to /tmp
+[UPC003] WARNING: /tmp/guest-gzwxju is the home directory of guest-gzwxju. World write is set for /tmp (but sticky bit set)
